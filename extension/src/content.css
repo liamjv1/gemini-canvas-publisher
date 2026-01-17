@@ -1,0 +1,64 @@
+.gcp-publish-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  margin-right: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Google Sans', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.gcp-publish-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.gcp-publish-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.gcp-publish-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.gcp-publish-btn.gcp-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.gcp-publish-btn.gcp-error {
+  background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+}
+
+.gcp-publish-btn svg {
+  flex-shrink: 0;
+}
+
+.gcp-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: gcp-spin 0.8s linear infinite;
+}
+
+@keyframes gcp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .gcp-publish-btn {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}

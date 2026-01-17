@@ -5,6 +5,12 @@
   "description": "Publish Gemini Canvas code to shareable URLs",
   "permissions": ["storage", "activeTab", "alarms"],
   "host_permissions": ["https://gemini.google.com/*"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gemini-canvas-publisher@devosurf.dev",
+      "strict_min_version": "109.0"
+    }
+  },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -18,7 +24,7 @@
     "default_title": "Gemini Canvas Publisher"
   },
   "background": {
-    "service_worker": "src/background.js"
+    "scripts": ["src/background.js"]
   },
   "content_scripts": [
     {
